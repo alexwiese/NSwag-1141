@@ -1,0 +1,117 @@
+﻿{
+  "x-generator": "NSwag v11.17.19.0 (NJsonSchema v9.10.58.0 (Newtonsoft.Json v11.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "version": "1.0.0"
+  },
+  "produces": [
+    "text/plain",
+    "application/json",
+    "text/json"
+  ],
+  "paths": {
+    "/api/Invoice": {
+      "get": {
+        "tags": [
+          "Invoice"
+        ],
+        "operationId": "Invoice_GetAll",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Invoice"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Invoice/{id}": {
+      "get": {
+        "tags": [
+          "Invoice"
+        ],
+        "operationId": "Invoice_Get",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Invoice"
+            }
+          }
+        }
+      }
+    },
+    "/api/Shipment_Invoice": {
+      "get": {
+        "tags": [
+          "Shipment_Invoice"
+        ],
+        "operationId": "Shipment_Invoice_GetAll",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ShipmentInvoice"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Shipment_Invoice/{id}": {
+      "get": {
+        "tags": [
+          "Shipment_Invoice"
+        ],
+        "operationId": "Shipment_Invoice_Get",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ShipmentInvoice"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Invoice": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "ShipmentInvoice": {
+      "type": "object",
+      "additionalProperties": false
+    }
+  }
+}
